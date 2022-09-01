@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<!-- 新 Bootstrap5 核心 CSS 文件 -->
+<link rel="stylesheet" href="static/bootstrap5.1.3/css/bootstrap.min.css">
+
+<!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+<script src="static/bootstrap5.1.3/js/bootstrap.bundle.min.js"></script>
+<body>
+<div class="container mt-3">
+  <h2>测试结果：{{testResult}}</h2>
+  <ul class="list-group">
+    <li class="list-group-item">转账hash：{{txMsg}}</li>
+    <input type="button" class="btn btn-primary" onclick="openTx()" value="打开转账hash"/>
+  </ul>
+    <div class="alert alert-warning">
+        <strong>温馨提示!</strong> 请检查接收转账的交易所账户余额是否增加！
+    </div>
+</div>
+</body>
+<script language="javascript" type="text/javascript">
+function openTx(){
+    window.open("{{txMsg}}")
+}
+</script>
+</html>
